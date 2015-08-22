@@ -1,7 +1,4 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## Function makeCacheMatrix()
 # makeCacheMatrix() is a function that returns a list of 4 functions:
 # set(): sets the x ("direct") square matrix according to the given input
 # get(): returns the x matrix
@@ -22,12 +19,13 @@ makeCacheMatrix <- function(x = matrix()) {
         setinv <- function(inversa = matrix()) inv_x <<- inversa
         # Definition of the getinv() function
         getinv <- function() inv_x
+        # the following lines builds the list of functions, i.e. the output of the function makeCacheMatrix()
         list(set = set, get = get, setinv = setinv, getinv = getinv)
 
 }
 
-
-## Write a short comment describing this function
+#---------------------------------------------------------------------------------------------
+## Function cacheSolve()
 # The cacheSolve() function computes the inverse of the x matrix assuming that it is invertible
 # It requires as input the "list of functions" returned by the makeCacheMatrix() function
 # Example of usage
